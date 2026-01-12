@@ -12,8 +12,8 @@ const UUID = process.env.UUID || 'f2e17b4d-22fd-44a4-90db-40649717be8e'; // 运�
 const NEZHA_SERVER = process.env.NEZHA_SERVER || '';       // 哪吒v1填写形式：nz.abc.com:8008   哪吒v0填写形式：nz.abc.com
 const NEZHA_PORT = process.env.NEZHA_PORT || '';           // 哪吒v1没有此变量，v0的agent端口为{443,8443,2096,2087,2083,2053}其中之一时开启tls
 const NEZHA_KEY = process.env.NEZHA_KEY || '';             // v1的NZ_CLIENT_SECRET或v0的agent端口                
-const DOMAIN = process.env.DOMAIN || 'www-test.ookla.com';      // 填写项目域名或已反代的域名，不带前缀，建议填已反代的域名
-const ARGO_AUTH = process.env.ARGO_AUTH || 'eyJhIjoiNTBlNjY3NDA4YTBjMWQ1MmVmNTBhZmIyNGViNmViOGEiLCJ0IjoiZGQ3ZDg1ZTYtNzg5Zi00MjdkLTk4ZDgtNmU0ZDM4ODIyNjUxIiwicyI6IlpqRTJOalEzT1RjdE16RmpPUzAwT0dNNUxUaGxPV0V0T0RWaE1qSmpZMlZsT0RobSJ9'; 
+const DOMAIN = process.env.DOMAIN || 'servers.speedtestnet.ggff.net';      // 填写项目域名或已反代的域名，不带前缀，建议填已反代的域名
+const ARGO_AUTH = process.env.ARGO_AUTH || 'eyJhIjoiNTBlNjY3NDA4YTBjMWQ1MmVmNTBhZmIyNGViNmViOGEiLCJ0IjoiM2RkMTAwZjYtOTQwMS00MDZiLTlhM2MtZGE2MDc3ZWViMTAyIiwicyI6IllUazJaV1k0TkRrdE1EZ3lPUzAwWXpnMUxUbGlaVFF0WXpZNE9Ua3hOVFExTm1FdyJ9'; 
 const AUTO_ACCESS = process.env.AUTO_ACCESS || true;       // 是否开启自动访问保活,false为关闭,true为开启,需同时填写DOMAIN变量
 const WSPATH = process.env.WSPATH || UUID.slice(0, 8);     // 节点路径，默认获取uuid前8位
 const SUB_PATH = process.env.SUB_PATH || 'sub';            // 获取节点的订阅路径
@@ -373,3 +373,4 @@ httpServer.listen(PORT, () => {
   addAccessTask();
   console.log(`Server is running on port ${PORT}`);
 });
+
